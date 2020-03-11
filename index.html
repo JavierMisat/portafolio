@@ -13,28 +13,30 @@
 <body>
 <!--Start Header-->
 <header class="header">
-    <figure class="logo">
-        <img src="images/logo.png" alt="Logo Javiermisat.com">
-    </figure>
-    <nav class="menu"> <!--Start Menu-->
-        <ul>
-            <li><a class="link" href="#portfolio">Portafolio</a></li>
-            <li><a class="link" href="#events">Experiencia</a></li>
-            <li><a class="link" href="#contact">Trabajemos juntos</a></li>
-        </ul>
-    </nav><!--End Menu-->
+    <div class="container">
+        <figure class="logo">
+            <img src="images/logo.png" height="50" alt="Logo Javiermisat.com">
+        </figure>
+        <nav class="menu"> <!--Start Menu-->
+            <ul>
+                <li><a class="link" href="#portfolio">Portafolio</a></li>
+                <li><a class="link" href="#events">Experiencia</a></li>
+                <li><a class="link" href="#contact">Trabajemos juntos</a></li>
+            </ul>
+        </nav><!--End Menu-->
+    </div>
 </header>
 <!--End Header-->
 
 <!--Start Main Content-->
-<main>
+<main class="container">
 
     <!--Start Portfolio-->
     <section class="hero">
         <h1>Hola soy <strong>Javier Misat</strong> Desarrollador web <br/>
             estoy <strong>especializado en posicionamiento orgánico </strong> y UI/UX</h1>
-<!--        <img src="images/hero.jpg" alt="Logo Javiermisat.com" width="500" height="300"
-             align="Imagen principal del sitio web">-->
+                <img src="images/hero.jpg" class="hero-image" alt="Logo Javiermisat.com" width="500" height="300"
+                     align="Imagen principal del sitio web">
     </section>
 
     <section id="portfolio" class="portfolio">
@@ -52,42 +54,90 @@
                     delectus quasi qui quisquam similique sit voluptatem!
                 </p>
             </div>
-                <figure class="project-image-wrapper">
-                    <img class="project-image" src="images/platzi-video-react-native.png"
-                         alt="Proyecto curso react native" width="1131" height="873">
-                </figure>
+            <figure class="project-image-wrapper">
+                <img class="project-image" src="images/platzi-video-react-native.png"
+                     alt="Proyecto curso react native" width="1131" height="873">
+            </figure>
         </article>
         <!--End Projects-->
     </section>
     <!--End Portfolio-->
 
     <!--Start Events-->
-    <section id="events" class="events">
-        <h2>Más sobre mi experiencia</h2>
+        <h2 class="event-list-title">Más sobre mi experiencia</h2>
+    <section id="events" class="event-list">
         <article class="event">
             <figure class="event-image-wrapper">
-                <img class="event-image" src="images/platzi-conf.jpg" width="500" alt="Platzi conf 2018">}
+                <img class="event-image" src="images/platzi-conf.jpg" width="500" alt="Platzi conf 2018">
             </figure>
-            <h3 class="event-title">Taller dispara tu emprendimiento digital Giradot</h3>
-            <p class="event-description">Evento organizado por la universidad de cundinamarca</p>
-            <a class="event-url" href="#" target="_blank">Ver Charla</a>
+            <div class="event-detail">
+                <h3 class="event-title">Taller dispara tu emprendimiento digital Giradot</h3>
+                <p class="event-description">Evento organizado por la universidad de cundinamarca</p>
+                <a class="event-url" href="#" target="_blank">Ver Charla</a>
+            </div>
+        </article>
+        <article class="event">
+            <figure class="event-image-wrapper">
+                <img class="event-image" src="images/platzi-conf.jpg" width="500" alt="Platzi conf 2018">
+            </figure>
+            <div class="event-detail">
+                <h3 class="event-title">Taller dispara tu emprendimiento digital Giradot</h3>
+                <p class="event-description">Evento organizado por la universidad de cundinamarca</p>
+                <a class="event-url" href="#" target="_blank">Ver Charla</a>
+            </div>
+        </article>
+        <article class="event">
+            <figure class="event-image-wrapper">
+                <img class="event-image" src="images/platzi-conf.jpg" width="500" alt="Platzi conf 2018">
+            </figure>
+            <div class="event-detail">
+                <h3 class="event-title">Taller dispara tu emprendimiento digital Giradot</h3>
+                <p class="event-description">Evento organizado por la universidad de cundinamarca</p>
+                <a class="event-url" href="#" target="_blank">Ver Charla</a>
+            </div>
+        </article>
+        <article class="event">
+            <figure class="event-image-wrapper">
+                <img class="event-image" src="images/platzi-conf.jpg" width="500" alt="Platzi conf 2018">
+            </figure>
+           <div class="event-detail">
+               <h3 class="event-title">Taller dispara tu emprendimiento digital Giradot</h3>
+               <p class="event-description">Evento organizado por la universidad de cundinamarca</p>
+               <a class="event-url" href="#" target="_blank">Ver Charla</a>
+           </div>
         </article>
     </section>
     <!--End Events-->
 
     <!--Start Contact-->
     <section id="contact" class="contact">
-        <form action="/suscripcion/">
+        <form action="/suscripcion/" class="form-email" >
             <h3>Empieza ahora a despegar tu negocio</h3>
-            <input type="text" placeholder="Déjame tu email" value="example@mail.com">
+            <input type="text" placeholder="Déjame tu email" value=" ">
             <input type="submit" value="Enviar">
         </form>
+
+        <div class="social">
+            <a href="#" class="social-link twitter"></a>
+            <a href="#" class="social-link facebook"></a>
+            <a href="#"class="social-link github"></a>
+            <a href="#"class="social-link instagram"></a>
+        </div>
     </section>
     <!--End Contact-->
 
     <!--Start Footer-->
     <footer class="footer">
-
+        <div>
+            <p>
+                Copyright &copy; 2020 javiermisat.com <img src="images/platzi.png" width="80" alt="Platzi">
+            </p>
+        </div>
+        <div>
+            <p>
+                Plantilla desarrollada por <3 <a href="https://javiermisat.com/">Javier Misat</a>
+            </p>
+        </div>
     </footer>
     <!--End Footer-->
 
