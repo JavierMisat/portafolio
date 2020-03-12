@@ -1,0 +1,354 @@
+/*
+Reglas
+Selectores
+Declaraciones
+Propiedades
+Valores
+
+gris oscuro : #1d252c;
+gris claro : #626262;
+background gris: #1b2127;
+color celeste: #026fff
+
+*/
+
+:root {
+    /*
+    Colores de diseño
+     */
+    --color-gris-oscuro: #1d252c;
+    --color-gris-claro: #1d252c;
+    --color-gris-shadow: rgba(22, 29, 35, 0.78);
+    --color-gris-background: #1d252c;
+    --color-gris-background-claro: rgba(184, 184, 184, 0.41);
+    --color-blanco: #fff;
+    --color-gris: #727272;
+    --color-azul-rey: #026fff;
+    --color-celeste: #f4fbff;
+
+    /*
+        Sombras de cajas
+     */
+    --header-shadow: inset 0 9px 8px 2px var(--color-gris-shadow);
+    --project-shadow: 10px -12px 193px -93px rgba(22,29,35,0.56);
+;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700,700i,900&display=swap');
+
+/*Selector de etiqueta header - section - article - nav etc*/
+* {
+    margin: 0;
+    padding: 0;
+    /*
+    box-sizing: border-box;
+    */
+}
+
+body {
+    background-color: var(--color-gris-background-claro);
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1, h2, h3, h3, h4, h5, h6 {
+    font-family: "Fjalla One", sans-serif;
+}
+
+
+h1 {
+    font-size: 40px;
+    line-height: 1.5em;
+    font-weight: normal;
+    letter-spacing: -.2px;
+    color: var(--color-blanco);
+    margin: 0;
+    align-items: center;
+    /*text-transform: uppercase;*/
+    /*text-decoration: underline;*/
+    /*    font-style: italic;*/
+}
+
+h1 strong {
+    color: var(--color-azul-rey);
+}
+
+
+/*Selector descendente */
+/*body header nav ul li a {
+    background-color: rebeccapurple;
+}
+*/
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: inherit;
+    display: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+.header {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.header ol, ul {
+    display: flex;
+    height: inherit;
+}
+
+.header ol li, ul li {
+    height: inherit;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+
+.header a {
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.menu {
+    height: inherit;
+}
+
+.logo {
+}
+
+.hero {
+    height: 300px;
+    /*background-image: url("../images/hero.jpg");*/
+    background-color: var(--color-gris-oscuro);
+    /* background-repeat: no-repeat;*/
+    /*background-size: 500px 300px;*/
+    /*background-position: right;*/
+    /*background-position-x: right;*/
+    -webkit-box-shadow:var(--header-shadow);
+    -moz-box-shadow: var(--header-shadow);
+    box-shadow: var(--header-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero img {
+    object-fit: cover;
+    --webkit-clip-path: polygon(21% 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(21% 0, 100% 0%, 100% 100%, 0% 100%); /** dar corte a imagen css**/
+}
+
+.hero img {
+    object-fit: cover;
+
+}
+
+
+.portfolio {
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact {
+    background-color: var(--color-azul-rey);
+    color: var(--color-blanco);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-email input[type="text"] {
+    border-color: var(--color-gris);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 15px;
+    width: 260px;
+    background-image: url("../images/envelope.svg");
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+.form-email input[type="submit"] {
+    display: block;
+    background: transparent;
+    color: var(--color-blanco);
+    border: 1px solid;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.form-email h3 {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.social {
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+}
+
+.social-link.twitter {
+    background-image: url("../images/twitter.svg");
+}
+
+.social-link.facebook {
+    background-image: url("../images/facebook.svg");
+}
+
+.social-link.facebook {
+    background-image: url("../images/facebook.svg");
+}
+
+.social-link.github {
+    background-image: url("../images/github.svg");
+}
+
+.social-link.instagram {
+    background-image: url("../images/instagram.svg");
+}
+
+.project {
+    border-radius: 5px;
+    margin: 10px 10px 20px 10px;
+    max-width: 100%;
+    background-color: var(--color-blanco);
+    box-shadow: var(--project-shadow);
+    display: flex;
+    box-sizing: border-box;
+}
+
+.project-details {
+    width: 500px;
+    padding: 20px;
+}
+
+.project-title {
+}
+
+.project-course {
+}
+
+.project-date {
+}
+
+.project-url {
+}
+
+.project-description {
+}
+
+.project-image-wrapper {
+
+}
+
+.project-image {
+    width: 600px;
+    height: auto;
+}
+
+.event-list-title, .portfolio h2 {
+    margin: 30px 30px;
+    color: var(--color-azul-rey);
+}
+
+.event {
+    margin: 10px;
+    width: 480px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--color-celeste);
+}
+
+.event-image-wrapper {
+    width: inherit;
+    object-fit: cover;
+
+}
+
+.event-image {
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-detail {
+    margin: -40px 40px 20px 40px;
+    border-radius: 3px;
+    position: relative;
+    background-color: var(--color-blanco);
+    padding: 20px;
+    text-align: center;
+}
+
+.event-description {
+    text-align: left;
+}
+
+.event-url {
+    color: var(--color-azul-rey);
+    border: 1px solid;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.footer {
+    align-items: center;
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: var(--color-blanco);
+}
+
