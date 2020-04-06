@@ -95,7 +95,7 @@ figure {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     justify-content: inherit;
     display: inherit;
@@ -112,6 +112,7 @@ figure {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .header ol, ul {
@@ -156,6 +157,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero img {
@@ -183,6 +185,7 @@ figure {
     color: var(--color-blanco);
     height: 150px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -254,6 +257,7 @@ figure {
     background-color: var(--color-blanco);
     box-shadow: var(--project-shadow);
     display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
 }
 
