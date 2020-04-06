@@ -30,8 +30,7 @@ color celeste: #026fff
         Sombras de cajas
      */
     --header-shadow: inset 0 9px 8px 2px var(--color-gris-shadow);
-    --project-shadow: 10px -12px 193px -93px rgba(22,29,35,0.56);
-;
+    --project-shadow: 10px -12px 193px -93px rgba(22, 29, 35, 0.56);;
 
 }
 
@@ -151,7 +150,7 @@ figure {
     /*background-size: 500px 300px;*/
     /*background-position: right;*/
     /*background-position-x: right;*/
-    -webkit-box-shadow:var(--header-shadow);
+    -webkit-box-shadow: var(--header-shadow);
     -moz-box-shadow: var(--header-shadow);
     box-shadow: var(--header-shadow);
     display: flex;
@@ -352,3 +351,26 @@ figure {
     color: var(--color-blanco);
 }
 
+/* Segunda forma de aplicar media queries */
+
+/** Si se va a realizar un diseño desktop forst se debne empezar por el media querie más grande**/
+/**
+    Las medidas standar para breakpoints son: 1024px - 768px - 480px - 320px
+ */
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+/*    body {
+        border: 10px solid green;
+    }*/
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
