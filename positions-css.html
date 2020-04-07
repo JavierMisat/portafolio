@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positions CSS</title>
+</head>
+<body>
+
+<style>
+    .section{
+        height: 200px;
+        background-color: lightgray;
+        margin: 10px 0;
+        border: 1px solid red;
+        font-size: 3em;
+    }
+    p{
+        background-color: red;
+        display:  inline-block;
+    }
+    p span{
+        position: absolute;
+        /*background-color: blue;*/
+        top: 0;
+        left: 0;
+     }
+
+    .mundo{
+        background-color: hotpink;
+    }
+    .responsive{
+        background-color: yellow;
+    }
+
+    .sticky{
+        position: sticky;
+        background-color: aqua;
+        top: 0;
+    }
+</style>
+
+<section class="section sticky">
+   <p>
+       Hola <span class="mundo">mundo</span>
+       <span class="responsive">responsive design</span>
+   </p>
+</section>
+<section class="section">
+
+</section>
+<section class="section"></section>
+<section class="section"></section>
+<section class="section"></section>
+<section class="section"></section>
+<section class="section"></section>
+<section class="section"></section>
+
+
+
+</body>
+</html>
