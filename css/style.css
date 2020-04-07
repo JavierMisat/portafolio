@@ -96,7 +96,13 @@ figure {
 
 .container {
     max-width: 1200px;
+    /*
+    width: 100%;
+    opción para ocupar ancho disponible con max-width
+    */
+    flex: 1; /*Ocupa el  100% disponible*/
     margin: 0 auto;
+    padding: 0 1em;
     justify-content: inherit;
     display: inherit;
     align-items: inherit;
@@ -256,14 +262,14 @@ figure {
     max-width: 100%;
     background-color: var(--color-blanco);
     box-shadow: var(--project-shadow);
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
 
 .project-details {
-    width: 500px;
-    padding: 20px;
+    width: 50%;
 }
 
 .project-title {
@@ -282,11 +288,11 @@ figure {
 }
 
 .project-image-wrapper {
-
+    width: 50%;
 }
 
 .project-image {
-    width: 600px;
+    width: 100%;
     height: auto;
 }
 
@@ -296,8 +302,8 @@ figure {
 }
 
 .event {
-    margin: 10px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
     flex-shrink: 0;
     border-radius: 10px;
     overflow: hidden;
@@ -305,14 +311,14 @@ figure {
 }
 
 .event-image-wrapper {
-    width: inherit;
+    width: 100%;
     object-fit: cover;
 
 }
 
 .event-image {
     width: inherit;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -365,14 +371,118 @@ figure {
 
 }
 
-@media screen and (max-width: 768px) {
-/*    body {
-        border: 10px solid green;
-    }*/
+@media screen and (max-width: 767px) {
+    /*    body {
+            border: 10px solid green;
+        }*/
+    .header {
+        display: block;
+        height: auto;
+    }
+
+    .header ol, ul {
+        display: initial; /*Deja el elemento por defecto en este caso : inline*/
+    }
+
+    .header ol li, ul li {
+        height: 50px;
+    }
+
+    .header a {
+        justify-content: center;
+    }
+
+    .header .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+
+    .project {
+        display: block;
+    }
+
+    .project-details {
+        width: auto;
+        /*
+        Se pone para heredar los elementos siguientes
+        con em, se ouede modificar en el media querie
+        de las pantallas más pequeñas
+        font-size: 16px;
+        */
+    }
+
+    .project-course, .project-date, .project-url{
+        margin: .3em 0;
+    }
+
+    .project-title {
+        font-size: 1em;
+        margin-bottom: .3em;
+    }
+
+    .project-url {
+        font-size: 1em;
+    }
+
+    .project-course {
+        font-size: .7em;
+    }
+
+    .project-date {
+        font-size: 1em;
+    }
+
+    .project-description {
+        font-size: .8em;
+    }
+
+    .project-image-wrapper {
+        width: auto;
+    }
+    .event{
+        width: auto;
+        flex-shrink: initial;
+    }
+    .event-detail{
+        /* 1em = 16px */
+        margin: -2em .5em .5em;
+        padding: 1.2em;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
+    .project-details {
+        font-size: 12px;
+    }
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        justify-content: center;
+        justify-items: center;
+    }
 
+    .contact .form-email{
+        display: inherit;
+        flex-direction: column;
+    }
+
+    .contact .form-email input{
+        align-self: center;
+    }
+
+    .contact .form-email{
+        margin: 1em auto;
+    }
+
+    .footer .container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 320px) {
