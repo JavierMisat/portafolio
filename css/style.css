@@ -17,7 +17,7 @@ color celeste: #026fff
     Colores de diseño
      */
     --color-gris-oscuro: #1d252c;
-    --color-gris-claro: #1d252c;
+    --color-gris-claro: rgba(0, 0, 0, 0.8);
     --color-gris-shadow: rgba(22, 29, 35, 0.78);
     --color-gris-background: #1d252c;
     --color-gris-background-claro: rgba(184, 184, 184, 0.41);
@@ -36,8 +36,8 @@ color celeste: #026fff
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?k6on5z');
-    src:  url('../fonts/icomoon.eot?k6on5z#iefix') format('embedded-opentype'),
+    src: url('../fonts/icomoon.eot?k6on5z');
+    src: url('../fonts/icomoon.eot?k6on5z#iefix') format('embedded-opentype'),
     url('../fonts/icomoon.ttf?k6on5z') format('truetype'),
     url('../fonts/icomoon.woff?k6on5z') format('woff'),
     url('../fonts/icomoon.svg?k6on5z#icomoon') format('svg');
@@ -64,21 +64,27 @@ color celeste: #026fff
 .icon-menu:before {
     content: "\e9bd";
 }
+
 .icon-facebook2:before {
     content: "\ea91";
 }
+
 .icon-instagram:before {
     content: "\ea92";
 }
+
 .icon-whatsapp:before {
     content: "\ea93";
 }
+
 .icon-twitter:before {
     content: "\ea96";
 }
+
 .icon-youtube:before {
     content: "\ea9d";
 }
+
 .icon-github:before {
     content: "\eab0";
 }
@@ -428,13 +434,34 @@ figure {
     height: 100%;
 }
 
-.flexible-video{
+.flexible-video {
     position: relative;
     padding-top: 56.25%;
     height: 0;
     width: 100%;
     background: #026fff;
 }
+
+.burguer-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center; /*Otra técnica de centrado de icono*/
+/*    display: flex; Alineado con flexbox
+    align-items: center;
+    justify-content: center;*/
+    color: var(--color-blanco);
+    background-color: var(--color-gris-claro);
+    position: fixed;
+    z-index: 10;
+    left: 5px;
+    top: 5px;
+}
+
+
+/* Responsive Rules =========== */
 
 /* Segunda forma de aplicar media queries */
 
@@ -444,18 +471,20 @@ figure {
  */
 @media screen and (max-width: 1024px) {
 
-    .hero{
+    .hero {
         height: auto;
         overflow: hidden;
         position: relative;
         padding: 2em;
     }
-    .hero h1{
+
+    .hero h1 {
         font-size: 2em;
         background-size: contain;
         z-index: 3;
     }
-    .overlay{
+
+    .overlay {
         z-index: 2;
         top: 0;
         bottom: 0;
@@ -468,7 +497,8 @@ figure {
         opacity: 0.5;
         width: 100%;
     }
-    .hero img{
+
+    .hero img {
         width: 100%;
         top: 5px;
         left: 0;
@@ -485,6 +515,9 @@ figure {
     /*    body {
             border: 10px solid green;
         }*/
+    .burguer-button {
+        display: block;
+    }
     .header {
         display: block;
         height: auto;
@@ -525,7 +558,7 @@ figure {
         */
     }
 
-    .project-course, .project-date, .project-url{
+    .project-course, .project-date, .project-url {
         margin: .3em 0;
     }
 
@@ -553,11 +586,13 @@ figure {
     .project-image-wrapper {
         width: auto;
     }
-    .event{
+
+    .event {
         width: auto;
         flex-shrink: initial;
     }
-    .event-detail{
+
+    .event-detail {
         /* 1em = 16px */
         margin: -2em .5em .5em;
         padding: 1.2em;
@@ -568,31 +603,33 @@ figure {
     .project-details {
         font-size: 12px;
     }
-    .contact{
+
+    .contact {
         height: auto;
         padding: 1.5em 0;
         justify-content: center;
         justify-items: center;
     }
 
-    .contact .form-email{
+    .contact .form-email {
         display: inherit;
         flex-direction: column;
     }
 
-    .contact .form-email input{
+    .contact .form-email input {
         align-self: center;
     }
 
-    .contact .form-email{
+    .contact .form-email {
         margin: 1em auto;
     }
 
-    .footer .container{
+    .footer .container {
         display: flex;
         flex-direction: column;
     }
-    h1{
+
+    h1 {
         font-size: 2em;
     }
 }
