@@ -23,7 +23,7 @@ color celeste: #026fff
     --color-gris-background-claro: rgba(184, 184, 184, 0.41);
     --color-blanco: #fff;
     --color-gris: #727272;
-    --color-azul-rey: #026fff;
+    --color-azul-rey: rgba(2, 111, 255, .9);
     --color-celeste: #f4fbff;
 
     /*
@@ -455,7 +455,7 @@ figure {
     color: var(--color-blanco);
     background-color: var(--color-gris-claro);
     position: fixed;
-    z-index: 10;
+    z-index: 5;
     left: 5px;
     top: 5px;
 }
@@ -533,11 +533,36 @@ figure {
 
     .header a {
         justify-content: center;
+        height: 40px;
+        font-size: 2em ;
+        margin-bottom: .5em;
+    }
+    .header a:hover, a:active  {
+        text-decoration: underline;
     }
 
     .header .logo {
         display: flex;
         justify-content: center;
+    }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        /*height: 100vh;*/
+        bottom: 0;
+        background-color: var(--color-azul-rey);
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu.is-active{
+        left: 0;
     }
 
     .project-image {
