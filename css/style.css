@@ -64,6 +64,24 @@ color celeste: #026fff
 .icon-menu:before {
     content: "\e9bd";
 }
+.icon-facebook2:before {
+    content: "\ea91";
+}
+.icon-instagram:before {
+    content: "\ea92";
+}
+.icon-whatsapp:before {
+    content: "\ea93";
+}
+.icon-twitter:before {
+    content: "\ea96";
+}
+.icon-youtube:before {
+    content: "\ea9d";
+}
+.icon-github:before {
+    content: "\eab0";
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700,700i,900&display=swap');
@@ -120,10 +138,6 @@ ul, ol {
 figure {
     margin: 0;
     padding: 0;
-}
-
-.link {
-
 }
 
 .container {
@@ -257,11 +271,11 @@ figure {
     font-family: "Source Sans Pro", sans-serif;
 }
 
-.social {
-}
-
 .social-link {
     display: inline-block;
+    font-size: 50px;
+    color: var(--color-blanco);
+    text-decoration: none;
     width: 50px;
     height: 50px;
     margin: 0 10px;
